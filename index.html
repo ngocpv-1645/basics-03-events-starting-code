@@ -21,13 +21,9 @@
       <button v-on:click='add(10)'>Add 10</button>
       <button v-on:click='remove(5) '>Remove 5</button>
       <p>Result: {{ counter }}</p>
-      <input type="text" v-on:input='setName($event, "Ngoc")' v-on:keyup.enter='confirmInput()'>
-      <p>Your name: {{ confirmedName }}</p>
-
-      <form v-on:submit="submitForm">
-        <input type="text">
-        <button>Sign Up</button>
-      </form>
+      <input type="text" v-model="name" class="input-name">
+      <button v-on:click='reset()'>Reset Input</button>
+      <p>Your name: {{ name }}</p>
     </section>
   </body>
 </html>
